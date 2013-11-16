@@ -1,0 +1,12 @@
+To run this django project:
+    -Easiest way is to simply navigate to:
+        chet-weger.herokuapp.com/user/
+Otherwise, if you want to run on your own machine you will need to:
+    -Download django
+    -Download sqlite
+    -navigate to same folder with this README file
+    -enter:
+        python manage_dev.py runserver
+
+I promoted the CYAN database:
+HEROKU_POSTGRESQL_CYAN_URL: postgres://bipzuidntioeqt:fRuqINadfy6pn2jIQeaRJuLGZA@ec2-107-21-107-194.compute-1.amazonaws.com:5432/dchpodnokpi72a

@@ -1,0 +1,15 @@
+<html> <head>
+<title>{% block title %}Chet Weger{% endblock %}</title>
+<link rel="stylesheet" href="/media/style.css">
+
+<script type="text/javascript">
+	function showStuff(id) {
+		document.getElementById(id).style.display = 'block';
+	}
+</script>
+
+</head>
+<body>
+{% block content %}{% endblock %}
+</body>
+</html>

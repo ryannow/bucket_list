@@ -1,0 +1,17 @@
+I encountered the same problem trying to set up a simple django web application with a postgresql database on heroku and managed to solve it.  
+
+I don't fully understand the error but the fix is fairly simple: when you are passing python lists created by querries to your database, you need to ***limit the size of the list***.
+
+So for example if you are passing as context the following list:
+
+`set_list = userSetTable.objects.all()`
+
+`return render(request, 'fc/user.html', {'set_list': set_list,})`
+
+That will cause an error because set_list might be really big.  You need to specify a maximum size:
+
+    set_list = userSetTable.objects.all()[0:20]
+
+So in a real-world application, you might want to display the list as page results or whatever... you get the point.
+
+  [1]: https://answers.launchpad.net/openobject-server/+question/216433
